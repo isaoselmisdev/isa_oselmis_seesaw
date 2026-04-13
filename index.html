@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,36 @@
     <title>Seesaw Simulation</title>
 </head>
 <body>
-
-    <div id="game-area">
-        <div id="seesaw-container">
-            <div id="board">
-                </div>
-            <div id="pivot"></div>
+    <div id="info-panel">
+        <div class="info-card">
+            <span class="info-label">LEFT WEIGHT</span>
+            <span class="info-value"><span id="left-weight">0</span> kg</span>
         </div>
-
-        <div id="inventory">
-            <div class="weights-list" id="weights-list">
-                </div>
+        <div class="info-card">
+            <span class="info-label">RIGHT WEIGHT</span>
+            <span class="info-value"><span id="right-weight">0</span> kg</span>
         </div>
+        <div class="info-card">
+            <span class="info-label">LEFT TORQUE</span>
+            <span class="info-value"><span id="left-torque">0</span></span>
+        </div>
+        <div class="info-card">
+            <span class="info-label">RIGHT TORQUE</span>
+            <span class="info-value"><span id="right-torque">0</span></span>
+        </div>
+        <div class="info-card">
+            <span class="info-label">TILT ANGLE</span>
+            <span class="info-value"><span id="angle">0</span>°</span>
+        </div>
+        <div class="info-card">
+            <span class="info-label">NEXT WEIGHT</span>
+            <span class="info-value"><span id="current-kg">-</span> kg</span>
+        </div>
+    </div>
+
+    <div id="seesaw-container">
+        <div id="board"></div>
+        <div id="pivot"></div>
     </div>
 
     <script src="app.js"></script>
