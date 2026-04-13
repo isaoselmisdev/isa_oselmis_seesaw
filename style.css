@@ -1,0 +1,52 @@
+
+body {                                                                                                                                                                                
+    margin: 0;                                                                                                                                                                        
+    height: 100vh;                                                                                                                                                                    
+    position: relative;                                                                                                                                                               
+}  
+#seesaw-container {                         
+    position: absolute;                 
+    top: 50%;
+    left: 50%;                                                                                                                                                                        
+    transform: translate(-50%, -50%);
+    width: 600px;                                                                                                                                                                     
+    height: 300px;                                                                                                                                                                  
+    display: flex;                          
+    flex-direction: column;             
+    align-items: center;
+}
+
+#board {
+    width:  400px;
+    height: 20px;
+    background-color: #FF0000;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.5s ease-out; /* Animasyonun akıcı olması için */
+    transform-origin: center center;    /* Tam ortadan dönecek */
+    z-index: 2;
+}
+
+
+#pivot {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid #999900;
+    margin-top: -5px; /* Kalasın altına tam oturması için */
+}
+.weight-ball {
+    position: absolute; /* Kalasın koordinatlarına göre yerleşir */
+    bottom: 20px;       /* Kalasın tam üst yüzeyine yapışır */
+    width: 40px;
+    height: 40px;
+    background-color: #e74c3c;
+    border-radius: 50%; /* Kareyi top yapar */
+    transform: translateX(-50%); /* Tıklanan noktanın tam ortasına oturması için */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
