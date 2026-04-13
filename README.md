@@ -19,6 +19,7 @@ visibility: hidden ile başlamak mantıklıydı ama mouse hareket etmeyince top 
 Toplar üst üste binince ayrılamıyor, hangisi nerede belli olmuyor                                                                                                                 
 Board döndüğünde getBoundingClientRect() eğik board koordinatları döndürüyor, torque hesabı bunu dikkate almıyor                                                                  
 localStorage sadece left ve kg saklıyor, top boyutu yeniden hesaplanıyor
+tork değerleri px cm dönüşümü yapılmamıştır görülen tork değerleri gerçek tork değerleri değildir sadece sol ve sağ kısımların arasındaki farkı görebilmek için eklenmiştir.
 
 ## AI Usage
 css de tasarım kısmında info cardlarının olduğu yerde daha estetik gözükmesi için ai kullandı.Local storageye kaydolmuyordu yazarken claude'a debug yaptırıp düzelttirdim.Readme yazarken yardım aldım.

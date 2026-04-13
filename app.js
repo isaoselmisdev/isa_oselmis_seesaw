@@ -136,5 +136,18 @@ function calculateTorque() {
     angleSpan.innerText = angle.toFixed(1);
 }
 
+document.getElementById('reset-btn').addEventListener('click', function() {
+    board.querySelectorAll('.weight-ball').forEach(function(ball) {
+        ball.remove();
+    });
+    board.style.transform = 'rotate(0deg)';
+    localStorage.removeItem('seesawState');
+    leftTorqueSpan.innerText = 0;
+    rightTorqueSpan.innerText = 0;
+    leftWeightSpan.innerText = 0;
+    rightWeightSpan.innerText = 0;
+    angleSpan.innerText = '0.0';
+});
+
 loadState();
 createBall();

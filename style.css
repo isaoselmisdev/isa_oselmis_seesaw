@@ -84,3 +84,17 @@ body {
       font-weight: 700;
       color: #2d3748;
   }
+
+  #reset-btn {
+      align-self: center;
+      padding: 10px 24px;
+      background: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+  }
+
