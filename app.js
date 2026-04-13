@@ -56,8 +56,28 @@ document.addEventListener("click",function(e){
         currentBall.style.left = lastX + "px"
         currentBall.style.top = "";
         board.appendChild(currentBall)
+        calculateTorque() 
         createBall();
     }
 
 })
-  createBall();
+createBall();
+
+function calculateTorque(){
+    const balls = board.querySelectorAll(".weight-ball")
+    let leftTorque = 0;
+    let rightTorque = 0;
+    balls.forEach(function(ball){
+        console.log('ball left:', ball.style.left, 'kg:', parseInt(ball.innerText));  
+        const kg = parseInt(ball.innerText);
+        const distance = parseFloat(ball.style.left) -200;
+
+        if(distance < 0){
+            leftTorque += kg * Math.abs(distance)
+        } else{
+            rightTorque += kg * distance
+        }
+
+    })
+    console.log("left",leftTorque,"right",rightTorque);
+}
